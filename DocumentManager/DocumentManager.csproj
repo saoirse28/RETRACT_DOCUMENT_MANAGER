@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D7C0D64D-1B95-4AEB-8D81-D8CBCCF83D55}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DocumentManager</RootNamespace>
+    <AssemblyName>DocumentManager</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>clipboard.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>solution items\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging, Version=2.2.5.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>solution items\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math, Version=2.2.5.0, Culture=neutral, PublicKeyToken=abba2e25397ee8c9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>solution items\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="FyfeSoftware.Sketchy.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>solution items\FyfeSoftware.Sketchy.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="FyfeSoftware.Sketchy.Design">
+      <HintPath>solution items\FyfeSoftware.Sketchy.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="FyfeSoftware.Sketchy.WinForms">
+      <HintPath>solution items\FyfeSoftware.Sketchy.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Ghostscript.NET, Version=1.2.1.0, Culture=neutral, PublicKeyToken=f85051de34525b59, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ghostscript.NET.1.2.1\lib\net40\Ghostscript.NET.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Interop.WIA">
+      <HintPath>solution items\Interop.WIA.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Magick.NET-Q16-AnyCPU, Version=7.0.0.0, Culture=neutral, PublicKeyToken=2004825badfa91ec, processorArchitecture=MSIL">
+      <HintPath>..\packages\Magick.NET-Q16-AnyCPU.7.0.7.300\lib\net40\Magick.NET-Q16-AnyCPU.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tesseract">
+      <HintPath>solution items\Tesseract.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CropStencil.cs" />
+    <Compile Include="Data\dataTables.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="formAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formAbout.Designer.cs">
+      <DependentUpon>formAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formAdjustLight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formAdjustLight.Designer.cs">
+      <DependentUpon>formAdjustLight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formCategoryAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formCategoryAdd.Designer.cs">
+      <DependentUpon>formCategoryAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formDataTables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDataTables.Designer.cs">
+      <DependentUpon>formDataTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formCategoryDisabled.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formCategoryDisabled.Designer.cs">
+      <DependentUpon>formCategoryDisabled.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DocDataset.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="formDocumentsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDocumentsView.Designer.cs">
+      <DependentUpon>formDocumentsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocEvents.cs" />
+    <Compile Include="formLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLicense.Designer.cs">
+      <DependentUpon>formLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLogin.Designer.cs">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formPassword.Designer.cs">
+      <DependentUpon>formPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formViewOcr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formViewOcr.Designer.cs">
+      <DependentUpon>formViewOcr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formPhotoEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formPhotoEdit.Designer.cs">
+      <DependentUpon>formPhotoEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainDocManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainDocManager.Designer.cs">
+      <DependentUpon>MainDocManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formFind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formFind.Designer.cs">
+      <DependentUpon>formFind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formDocumentsImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDocumentsImport.Designer.cs">
+      <DependentUpon>formDocumentsImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formCategoryMove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formCategoryMove.Designer.cs">
+      <DependentUpon>formCategoryMove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formDocumentsMove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDocumentsMove.Designer.cs">
+      <DependentUpon>formDocumentsMove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="formCategoryRename.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formCategoryRename.Designer.cs">
+      <DependentUpon>formCategoryRename.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formScanner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formScanner.Designer.cs">
+      <DependentUpon>formScanner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formSettings.Designer.cs">
+      <DependentUpon>formSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formTitleDescriptionInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formTitleDescriptionInput.Designer.cs">
+      <DependentUpon>formTitleDescriptionInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Wia\ScanCompletedEventArgs.cs" />
+    <Compile Include="Wia\ScanEngine.cs" />
+    <Compile Include="Wia\ScannerInfo.cs" />
+    <Compile Include="Wia\WIAConstants.cs" />
+    <EmbeddedResource Include="formAbout.resx">
+      <DependentUpon>formAbout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formAdjustLight.resx">
+      <DependentUpon>formAdjustLight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formCategoryAdd.resx">
+      <DependentUpon>formCategoryAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDataTables.resx">
+      <DependentUpon>formDataTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formCategoryDisabled.resx">
+      <DependentUpon>formCategoryDisabled.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDocumentsView.resx">
+      <DependentUpon>formDocumentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formLicense.resx">
+      <DependentUpon>formLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formLogin.resx">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formPassword.resx">
+      <DependentUpon>formPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formViewOcr.resx">
+      <DependentUpon>formViewOcr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formPhotoEdit.resx">
+      <DependentUpon>formPhotoEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainDocManager.resx">
+      <DependentUpon>MainDocManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formFind.resx">
+      <DependentUpon>formFind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDocumentsImport.resx">
+      <DependentUpon>formDocumentsImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formCategoryMove.resx">
+      <DependentUpon>formCategoryMove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDocumentsMove.resx">
+      <DependentUpon>formDocumentsMove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formCategoryRename.resx">
+      <DependentUpon>formCategoryRename.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formScanner.resx">
+      <DependentUpon>formScanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formSettings.resx">
+      <DependentUpon>formSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formTitleDescriptionInput.resx">
+      <DependentUpon>formTitleDescriptionInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="solution items\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="solution items\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="solution items\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="solution items\scanner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="solution items\zoom_in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="solution items\zoom_out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="solution items\document.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="clipboard.ico" />
+    <Content Include="solution items\file.png" />
+    <Content Include="solution items\rotate_left.png" />
+    <Content Include="solution items\rotate_right.png" />
+    <Content Include="solution items\search.png" />
+    <None Include="solution items\tree\3 open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\toolBox\ToolBox.csproj">
+      <Project>{0609a0fc-6d7d-41e4-b933-b312245fe69e}</Project>
+      <Name>ToolBox</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
