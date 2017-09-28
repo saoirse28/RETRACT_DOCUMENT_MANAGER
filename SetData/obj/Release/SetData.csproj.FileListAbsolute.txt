@@ -1,0 +1,10 @@
+F:\DocumentManager\SetData\bin\Release\SetData.exe.config
+F:\DocumentManager\SetData\bin\Release\SetData.exe
+F:\DocumentManager\SetData\bin\Release\SetData.pdb
+F:\DocumentManager\SetData\bin\Release\toolBox.dll
+F:\DocumentManager\SetData\bin\Release\AppSoftware.LicenceEngine.KeyVerification.dll
+F:\DocumentManager\SetData\bin\Release\AppSoftware.LicenceEngine.Common.dll
+F:\DocumentManager\SetData\bin\Release\toolBox.pdb
+F:\DocumentManager\SetData\obj\Release\SetData.csprojResolveAssemblyReference.cache
+F:\DocumentManager\SetData\obj\Release\SetData.exe
+F:\DocumentManager\SetData\obj\Release\SetData.pdb
