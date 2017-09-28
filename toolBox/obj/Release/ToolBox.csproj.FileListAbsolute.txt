@@ -1,0 +1,8 @@
+F:\DocumentManager\toolBox\bin\Release\toolBox.dll
+F:\DocumentManager\toolBox\bin\Release\toolBox.pdb
+F:\DocumentManager\toolBox\bin\Release\AppSoftware.LicenceEngine.Common.dll
+F:\DocumentManager\toolBox\bin\Release\AppSoftware.LicenceEngine.KeyVerification.dll
+F:\DocumentManager\toolBox\obj\Release\YLScsImage.ImagePanel.resources
+F:\DocumentManager\toolBox\obj\Release\ToolBox.csproj.GenerateResource.Cache
+F:\DocumentManager\toolBox\obj\Release\toolBox.dll
+F:\DocumentManager\toolBox\obj\Release\toolBox.pdb
